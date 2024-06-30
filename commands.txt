@@ -1,5 +1,5 @@
 echo > {file_name.ex}
-type NULL > {file_name.ex}
+type NUL >  {file_name.ex}
 mkdir {dir_name}
 
 
