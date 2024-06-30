@@ -1,12 +1,16 @@
-from setuptools import setup
-
+# setup.py
+from setuptools import setup, find_packages
+NAME = "crt"
 setup(
-    name='crt',
-    version='0.2',
-    py_modules=['repos'],
+    name=NAME,
+    version='0.1',
+    packages=find_packages(),
+    install_requires=[
+        'click',
+    ],
     entry_points={
         'console_scripts': [
-            'repos=scripts.scripts:main',
+            'crt=crt.cli:main',
         ],
     },
 )

@@ -1,2 +1,2 @@
-def main():
+def crt():
     print("Hello, World!")
