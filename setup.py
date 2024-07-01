@@ -13,4 +13,8 @@ setup(
             'crt=crt.cli:main',
         ],
     },
+    include_package_data=True,
+    package_data={
+        'crt': ['data/templates.json'],
+    },
 )

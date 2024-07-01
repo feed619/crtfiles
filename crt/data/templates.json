@@ -25,7 +25,6 @@
       ".prettierrc"
     ]
   },
-
   "web-back": {
     "app": {
       "app_demo": [
