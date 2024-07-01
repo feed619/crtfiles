@@ -1,35 +1,38 @@
 import os
-import click
 from crt.templates import get_templates
 from crt.tools import get_all_directories, get_file_nesting
 
 
 def c_f(t_str_names, name):
-    print("tyyyt")
     if type(t_str_names) is dict:
         for key in t_str_names:
             for file in t_str_names[key]:
                 if (name):
                     full_name = name+"/"+key
-                    print("Создал папку ", key)
+                    if not os.path.isdir(full_name):
+                        os.system(f"mkdir {full_name}")
+                        print("Создал папку ", full_name)
                 else:
                     full_name = key
-                    print("Создал папку ", key)
+                    if not os.path.isdir(full_name):
+                        os.system(f"mkdir {full_name}")
+                        print("Создал папку ", full_name)
                 if type(file) is str:
-                    print(f"{full_name}/{file}")
+                    # print(f"{full_name}/{file}")
                     pass
                 else:
                     c_f(file, full_name)
     else:
         for file in t_str_names:
             if (name):
-                print("Создал папку ", name)
+                if not os.path.isdir(name):
+                    os.system(f"mkdir {name}")
+                    print("Создал папку ", name)
                 full_name = name+'/'
             else:
                 full_name = ""
-                # print("Создал папку ", name)
             if type(file) is str:
-                print(f"{full_name}{file}")
+                # print(f"{full_name}{file}")
                 pass
             else:
                 c_f(file, full_name)
@@ -74,3 +77,7 @@ def crt_temp(temp_name):
             print(dir)
             for file in d_temp.get(dir):
                 print("\t", file)
+
+
+# crt_files2(
+#     "py", "pope:pop2<py1:py:py3<asd:dwd<qwew:ewe>>>:asd1<asd2:asdf:asd3<q:2>:asd4>:asd5:asd52")

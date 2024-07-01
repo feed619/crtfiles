@@ -1,6 +1,6 @@
 # cli.py
 import click
-from crt.option import crt_files, crt_dirs, crt_temp
+from crt.option import crt_files, crt_files2, crt_dirs, crt_temp
 
 TEMP = "temp"
 DIR = "dir"
@@ -43,7 +43,8 @@ def c_dirs(name):
               type=str,
               help='-n/--name [file_name:file_name:...] ext',)
 def c_files(ext, name):
-    crt_files(ext, name)
+    # crt_files(ext, name)
+    crt_files2(ext, name)
     # print("create file", name, ext)
 
 

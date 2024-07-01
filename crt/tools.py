@@ -7,6 +7,7 @@ def get_all_directories(path):
 
 
 def get_file_nesting(nest):
+    # print(nest)
     s_name = 0
     index = 0
     l_dir = []
@@ -26,5 +27,12 @@ def get_file_nesting(nest):
             return (l_dir, index+1)
         if index+1 == len(nest):
             l_dir.append(nest[s_name:index+1].replace(':', ''))
+
         index += 1
     return l_dir
+
+
+# print(get_file_nesting("pope:pop2<py1:py:py3>:asd1<asd2:asdf:asd3<q:2>:asd4>:asd5:asd52"))
+# print(get_all_directories('crt'))
+# print(os.path.isdir("pope"))
+# print(type("asd") is str)
