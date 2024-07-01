@@ -1,38 +1,43 @@
 import os
 import click
 from crt.templates import get_templates
-from crt.tools import get_all_directories
-# crt file -n ds:asd<a1:a2:a3<p1:p2:p3>>:po4:po6
+from crt.tools import get_all_directories, get_file_nesting
 
 
-def file_nesting(nest):
-    # print(nest)
-    s_name = 0
-    index = 0
-    l_dir = []
-    while index < len(nest):
-        if nest[index] == '<':
-            list_dir, ind = file_nesting(nest[index+1:])
-            l_dir.append({f"{nest[s_name:index].replace(':', '')}": list_dir})
-            index = index+ind + 1
-            s_name = index+ind + 1
-        if nest[index] == ':':
-            if nest[s_name:index]:
-                l_dir.append(nest[s_name:index].replace(':', ''))
-            s_name = index
-        if nest[index] == '>':
-            if nest[s_name:index]:
-                l_dir.append(nest[s_name:index].replace(':', ''))
-            return (l_dir, index+1)
-        if index+1 == len(nest):
-            print("tyt")
-            l_dir.append(nest[s_name:index+1].replace(':', ''))
+def c_f(t_str_names, name):
+    print("tyyyt")
+    if type(t_str_names) is dict:
+        for key in t_str_names:
+            for file in t_str_names[key]:
+                if (name):
+                    full_name = name+"/"+key
+                    print("Создал папку ", key)
+                else:
+                    full_name = key
+                    print("Создал папку ", key)
+                if type(file) is str:
+                    print(f"{full_name}/{file}")
+                    pass
+                else:
+                    c_f(file, full_name)
+    else:
+        for file in t_str_names:
+            if (name):
+                print("Создал папку ", name)
+                full_name = name+'/'
+            else:
+                full_name = ""
+                # print("Создал папку ", name)
+            if type(file) is str:
+                print(f"{full_name}{file}")
+                pass
+            else:
+                c_f(file, full_name)
 
-        index += 1
-    return l_dir
 
-
-print(file_nesting("pope:pop2<py1:py:py3>:asd1<asd2:asdf:asd3<q:2>:asd4>:asd5:asd52"))
+def crt_files2(ext, t_str_names):
+    l_dir = get_file_nesting(t_str_names)
+    c_f(l_dir, "")
 
 
 def crt_files(ext, t_str_names):
@@ -69,6 +74,3 @@ def crt_temp(temp_name):
             print(dir)
             for file in d_temp.get(dir):
                 print("\t", file)
-
-
-# crt_dict_directories("asd:dsdsd:wewq1:3252das:fgsa:po")
