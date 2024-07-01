@@ -2,6 +2,37 @@ import os
 import click
 from crt.templates import get_templates
 from crt.tools import get_all_directories
+# crt file -n ds:asd<a1:a2:a3<p1:p2:p3>>:po4:po6
+
+
+def file_nesting(nest):
+    # print(nest)
+    s_name = 0
+    index = 0
+    l_dir = []
+    while index < len(nest):
+        if nest[index] == '<':
+            list_dir, ind = file_nesting(nest[index+1:])
+            l_dir.append({f"{nest[s_name:index].replace(':', '')}": list_dir})
+            index = index+ind + 1
+            s_name = index+ind + 1
+        if nest[index] == ':':
+            if nest[s_name:index]:
+                l_dir.append(nest[s_name:index].replace(':', ''))
+            s_name = index
+        if nest[index] == '>':
+            if nest[s_name:index]:
+                l_dir.append(nest[s_name:index].replace(':', ''))
+            return (l_dir, index+1)
+        if index+1 == len(nest):
+            print("tyt")
+            l_dir.append(nest[s_name:index+1].replace(':', ''))
+
+        index += 1
+    return l_dir
+
+
+print(file_nesting("pope:pop2<py1:py:py3>:asd1<asd2:asdf:asd3<q:2>:asd4>:asd5:asd52"))
 
 
 def crt_files(ext, t_str_names):
@@ -9,7 +40,7 @@ def crt_files(ext, t_str_names):
     for str_names in t_str_names:
         for file_name in str_names.split(":"):
             if f"{file_name}.{ext}" not in all_directories:
-                if ext is '.':
+                if ext == '.':
                     os.system(f"type NUL > {ext}{file_name}")
                     print(f"create {ext}{file_name}")
                 else:
@@ -36,5 +67,8 @@ def crt_temp(temp_name):
     if d_temp:
         for dir in d_temp:
             print(dir)
-            for file in dir:
+            for file in d_temp.get(dir):
                 print("\t", file)
+
+
+# crt_dict_directories("asd:dsdsd:wewq1:3252das:fgsa:po")
