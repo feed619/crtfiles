@@ -3,44 +3,66 @@ from crt.templates import get_templates
 from crt.tools import get_all_directories, get_file_nesting
 
 
-def c_f(t_str_names, name):
+def c_f(t_str_names, name, ext):
     if type(t_str_names) is dict:
         for key in t_str_names:
             for file in t_str_names[key]:
                 if (name):
-                    full_name = name+"/"+key
+                    full_name = name+"\\"+key
+                    print("tyt1")
                     if not os.path.isdir(full_name):
                         os.system(f"mkdir {full_name}")
                         print("Создал папку ", full_name)
                 else:
                     full_name = key
+                    print("tyt2")
                     if not os.path.isdir(full_name):
+
                         os.system(f"mkdir {full_name}")
                         print("Создал папку ", full_name)
                 if type(file) is str:
-                    # print(f"{full_name}/{file}")
-                    pass
+                    if (full_name):
+                        file_name = f"{full_name}\{file}.{ext}"
+                    else:
+                        file_name = f"{file}.{ext}"
+                    print(get_all_directories(f"{full_name}\\"))
+                    # if file_name  in get_all_directories(f"{full_name}\\"):
+                    #     # if not os.path.isdir(file_name):
+                    print(f"создал файл {file_name}")
+                    os.system(f"type NUL > {file_name}")
                 else:
-                    c_f(file, full_name)
+                    c_f(file, full_name, ext)
     else:
         for file in t_str_names:
             if (name):
+                print("tyt3")
                 if not os.path.isdir(name):
+
                     os.system(f"mkdir {name}")
                     print("Создал папку ", name)
-                full_name = name+'/'
+                full_name = name+'\\'
             else:
                 full_name = ""
             if type(file) is str:
-                # print(f"{full_name}{file}")
-                pass
+                if (full_name):
+                    file_name = f"{full_name}\{file}.{ext}"
+                else:
+                    file_name = f"{file}.{ext}"
+
+                # print(get_all_directories(f"{full_name}\\"))
+
+                # if file_name in get_all_directories(f"{full_name}\\"):
+                #     # if not os.path.isdir(f"{full_name}\{file}.{ext}"):
+                os.system(f"type NUL > {file_name}")
+                print(f"создал файл {file_name}")
             else:
-                c_f(file, full_name)
+                c_f(file, full_name, ext)
 
 
 def crt_files2(ext, t_str_names):
-    l_dir = get_file_nesting(t_str_names)
-    c_f(l_dir, "")
+    l_dir = get_file_nesting(t_str_names, len(t_str_names))
+    # print(l_dir)
+    c_f(l_dir, "", ext)
 
 
 def crt_files(ext, t_str_names):
@@ -81,3 +103,7 @@ def crt_temp(temp_name):
 
 # crt_files2(
 #     "py", "pope:pop2<py1:py:py3<asd:dwd<qwew:ewe>>>:asd1<asd2:asdf:asd3<q:2>:asd4>:asd5:asd52")
+
+# crt_files2(
+#     "py", "asd:www<po:qwe>:eeepew")
+# print(crt_files2("py", "pope"))

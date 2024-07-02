@@ -39,10 +39,11 @@ def c_dirs(name):
 @click.option('-n',
               '--name',
               required=True,
-              multiple=True,
+              multiple=False,
               type=str,
               help='-n/--name [file_name:file_name:...] ext',)
 def c_files(ext, name):
+    print(ext, name)
     # crt_files(ext, name)
     crt_files2(ext, name)
     # print("create file", name, ext)
