@@ -89,7 +89,7 @@
     "README.md",
     ".gitignore"
   ],
-  "сommon": [
+  "config": [
     "README.md",
     ".gitignore",
     "LICENSE",

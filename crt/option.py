@@ -75,6 +75,7 @@ def crt_files(ext, t_str_names):
     ans = is_correct_request(t_str_names)
     if ans == 1:
         l_dir = get_file_nesting(t_str_names, len(t_str_names))
+        print(l_dir)
         c_f(l_dir, ext)
     else:
         print(f"missing sign '{ans}' (use file --help)")
