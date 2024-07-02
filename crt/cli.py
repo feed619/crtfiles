@@ -43,7 +43,7 @@ def c_dirs(name):
               help='-n/--name [file_name:file_name:...] ext',)
 def c_files(ext, name):
     print(ext, name)
-    crt_files2(ext, name)
+    crt_files(ext, name)
 
 
 if __name__ == '__main__':
