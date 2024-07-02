@@ -1,9 +1,6 @@
 # cli.py
 import click
-from crt.option import crt_files, crt_dirs, crt_temp
-
-TEMP = "temp"
-DIR = "dir"
+from crt.option import crt_files, crt_temp
 
 
 @click.group(chain=True,)
@@ -25,17 +22,6 @@ def main():
               help='crt temp -n app',)
 def c_temp(name):
     crt_temp(name)
-
-
-@main.command('dir')
-@click.option('-n',
-              '--name',
-              required=True,
-              multiple=True,
-              type=str,
-              help='dir -n/--name [dir_name]',)
-def c_dirs(name):
-    crt_dirs(name)
 
 
 @main.command("file")

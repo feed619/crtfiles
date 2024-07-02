@@ -1,12 +1,12 @@
 import os
 
 
-def get_all_directories(path):
+def get_all_directories(path) -> list:
     files = os.listdir(path)
     return files
 
 
-def get_file_nesting(nest, size_n):
+def get_file_nesting(nest, size_n) -> list:
     s_name = 0
     index = 0
     l_dir = []
