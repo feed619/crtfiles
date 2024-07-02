@@ -35,7 +35,8 @@ def c_dirs(name):
 
 
 @main.command("file")
-@click.argument('ext')
+@click.argument('ext',
+                required=False,)
 @click.option('-n',
               '--name',
               required=True,

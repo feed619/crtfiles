@@ -3,27 +3,27 @@ from crt.templates import get_templates
 from crt.tools import get_all_directories, get_file_nesting
 
 
-def c_f(t_str_names, name, ext):
+def c_f(t_str_names,  ext, name=None):
     if type(t_str_names) is dict:
         for key in t_str_names:
+            if (name):
+                full_name = name+"\\"+key
+                print("tyt1")
+                if not os.path.isdir(full_name):
+                    os.system(f"mkdir {full_name}")
+                    print("Создал папку ", full_name)
+            else:
+                full_name = key
+                print("tyt2")
+                if not os.path.isdir(full_name):
+                    os.system(f"mkdir {full_name}")
+                    print("Создал папку ", full_name)
             for file in t_str_names[key]:
-                if (name):
-                    full_name = name+"\\"+key
-                    print("tyt1")
-                    if not os.path.isdir(full_name):
-                        os.system(f"mkdir {full_name}")
-                        print("Создал папку ", full_name)
-                else:
-                    full_name = key
-                    print("tyt2")
-                    if not os.path.isdir(full_name):
-                        os.system(f"mkdir {full_name}")
-                        print("Создал папку ", full_name)
                 if type(file) is str:
                     if full_name and file:
-                        file_name = f"{full_name}\{file}.{ext}"
+                        file_name = f"{full_name}\{file}.{ext}" if ext else f"{full_name}\{file}"
                     elif file:
-                        file_name = f"{file}.{ext}"
+                        file_name = f"{file}.{ext}" if ext else f"{file}"
                     else:
                         file_name = None
                     if file_name:
@@ -34,6 +34,7 @@ def c_f(t_str_names, name, ext):
                     c_f(file, full_name, ext)
     else:
         for file in t_str_names:
+            print(file)
             if (name):
                 print("tyt4")
                 if not os.path.isdir(name):
@@ -44,21 +45,21 @@ def c_f(t_str_names, name, ext):
                 full_name = ""
             if type(file) is str:
                 if (full_name):
-                    file_name = f"{full_name}\{file}.{ext}"
+                    file_name = f"{full_name}\{file}.{ext}" if ext else f"{full_name}\{file}"
                 else:
-                    file_name = f"{file}.{ext}"
+                    file_name = f"{file}.{ext}" if ext else f"{file}"
                 print("tyt5")
                 if not os.path.isfile(file_name):
                     os.system(f"type NUL > {file_name}")
                     print(f"создал файл {file_name}")
             else:
-                c_f(file, full_name, ext)
+                c_f(file, ext, full_name)
 
 
 def crt_files2(ext, t_str_names):
     l_dir = get_file_nesting(t_str_names, len(t_str_names))
     print(l_dir)
-    c_f(l_dir, "", ext)
+    c_f(l_dir, ext)
 
 
 def crt_files(ext, t_str_names):

@@ -21,13 +21,11 @@ def get_file_nesting(nest, size_n):
             else:
                 list_dir = t_dir
                 ind = size_n - index
-            print("tyt1")
             l_dir.append({f"{nest[s_name:index].replace(':', '')}": list_dir})
             index = index+ind + 1
             s_name = index+ind + 1
         if index+1 >= len(nest):
             if (nest[s_name:index+1]):
-                print("tyt")
                 l_dir.append(nest[s_name:index+1].replace(':', ''))
                 if index + 1 >= size_n:
                     return l_dir
@@ -35,12 +33,10 @@ def get_file_nesting(nest, size_n):
             return (l_dir)
         if nest[index] == ':':
             if nest[s_name:index]:
-                print("tyt")
                 l_dir.append(nest[s_name:index].replace(':', ''))
             s_name = index
         if nest[index] == '>':
             if nest[s_name:index]:
-                print("tyt")
                 l_dir.append(nest[s_name:index].replace(':', ''))
             return (l_dir, index+1)
         index += 1
