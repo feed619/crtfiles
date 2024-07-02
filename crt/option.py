@@ -1,6 +1,6 @@
 import os
 from crt.templates import get_templates
-from crt.tools import get_all_directories, get_file_nesting
+from crt.tools import get_all_directories, get_file_nesting, is_correct_request
 
 
 def c_f(t_str_names,  ext=None, name=None):
@@ -71,25 +71,13 @@ def c_d(l_str_names):
     return l_str_names
 
 
-def crt_files2(ext, t_str_names):
-    l_dir = get_file_nesting(t_str_names, len(t_str_names))
-    print(l_dir)
-    c_f(l_dir, ext)
-
-
 def crt_files(ext, t_str_names):
-    all_directories = get_all_directories('.')
-    for str_names in t_str_names:
-        for file_name in str_names.split(":"):
-            if f"{file_name}.{ext}" not in all_directories:
-                if ext == '.':
-                    os.system(f"type NUL > {ext}{file_name}")
-                    print(f"create {ext}{file_name}")
-                else:
-                    os.system(f"type NUL > {file_name}.{ext}")
-                    print(f"create {file_name}.{ext}")
-            else:
-                print("file exists")
+    ans = is_correct_request(t_str_names)
+    if ans == 1:
+        l_dir = get_file_nesting(t_str_names, len(t_str_names))
+        c_f(l_dir, ext)
+    else:
+        print(f"missing sign '{ans}' (use file --help)")
 
 
 def crt_dirs(t_str_names):
@@ -107,12 +95,3 @@ def crt_temp(temp_name):
     l_temp = get_templates(temp_name)
     l_dir = c_d(l_temp)
     c_f(l_dir)
-
-
-crt_temp("app")
-# crt_files2(
-#     "py", "pope:pop2<py1:py:py3<asd:dwd<qwew:ewe>>>:asd1<asd2:asdf:asd3<q:2>:asd4>:asd5:asd52")
-
-# crt_files2(
-#     "py", "asd<a1:a2<g2>:a3<po:po1>>:piop:ieqw<po<main>>")
-# print(crt_files2("py", "pope"))

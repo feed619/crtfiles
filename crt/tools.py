@@ -43,8 +43,12 @@ def get_file_nesting(nest, size_n):
     return l_dir
 
 
-# n = "asd:a1:a2:a3<po:po1<a:a2>>"
-# n = "pope:pop2<py1:py:py3>:asd1<asd2:asdf:asd3<q:2>:asd4>:asd5:asd52"
-
-# print(get_file_nesting("pope:pop2<py1:py:py3>:asd1<asd2:asdf:asd3<q:2>:asd4>:asd5:asd52"))
-# print(get_file_nesting(n, len(n)))
+def is_correct_request(s_name: str):
+    cont_l_b = s_name.count('<')
+    cont_r_b = s_name.count('>')
+    if cont_l_b == cont_r_b:
+        return 1
+    if cont_l_b < cont_r_b:
+        return '<'
+    if cont_l_b > cont_r_b:
+        return '>'
