@@ -2,11 +2,8 @@
 <img src="docs/crt_logo_dark_blue.png" />
 </p>
 
-<p align="center">
-        <h1>crt</h1> 
-        <h3>Fast and convenient tool for creating files</h3>
+<p align="center" style="font-size:100px;">crt Fast and convenient tool for creating files
 </p>
-<span style="font-size:100px;">crt</span>
 ##
 
 :Version: 1.0
