@@ -1,3 +1,4 @@
+ <div>
 <p align="center">
 <img src="docs/crt_logo_dark_blue.png" />
 </p>
@@ -8,7 +9,7 @@
         <h3>Fast and convenient tool for creating files</h3>
     </div>
 </p>
-
+    </div>
 ##
 
 :Version: 1.0
