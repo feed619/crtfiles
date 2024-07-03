@@ -1,5 +1,7 @@
 <p align="center">
 <h1>crt</h1>
+</p>
+<p align="center">
 <img src="docs/crt_logo_black.png" />
 </p>
 
