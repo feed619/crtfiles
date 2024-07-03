@@ -49,7 +49,7 @@ pip install crtfiles
 ### 1) Creating a file:
 
 ```console
-crt file -n "main.py:test.py:requirements.txt"
+crt file -n main.py:test.py:requirements.txt
 
 --->
 your_folder/
@@ -62,7 +62,7 @@ your_folder/
 ### 2) Сreating a file with the extension option:
 
 ```console
-crt file -n "main:test" py
+crt file -n main:test py
 
 --->
 your_folder/
@@ -148,7 +148,7 @@ your_folder/
 
 ## Attention
 
-if you are working in the cmd console, then the request must be wrapped in quotes to avoid conflicts with the folder creation characters '<>'
+if you are working in the cmd console, then the request must be wrapped in quotes "" to avoid conflicts with the folder creation characters '<>'
 
 ---
 
