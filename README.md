@@ -1,5 +1,5 @@
 <p align="center">
-<img src="docs/crt_logo_dark_blue.png" />
+<img src="docs/crt_logo_black.png" />
 </p>
 
 <h2>
