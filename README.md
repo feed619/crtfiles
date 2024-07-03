@@ -28,6 +28,8 @@ crt - a powerful command line tool designed to create files quickly and easily, 
 - **file**: use to create files, folders and attachments.
 - **temp**: use to create a project using a template (templates are stored in the "templates.json" file).
 
+---
+
 ## Command Options:
 
 - **file**:
@@ -45,6 +47,8 @@ pip install crtfiles
 
 ---> 100%
 ```
+
+---
 
 ## Example
 
@@ -146,9 +150,13 @@ your_folder/
 
 ```
 
+---
+
 ## Attention
 
 if you are working in the cmd console, then the request must be wrapped in quotes to avoid conflicts with the folder creation characters '<>'
+
+---
 
 ## Setting up templates
 
@@ -162,6 +170,8 @@ Location: ...\Lib\site-packages\
 ```
 
 open the "crt" folder, then open the "data" folder and add or edit templates in the "templates.json" file to suit your needs (add templates strictly according to the examples from the file, if you make a mistake the result can be disastrous)
+
+---
 
 ## Feedback:
 
