@@ -10,14 +10,7 @@
 
 ---
 
-:Version: 1.0
-:Download: https://pypi.org/project/crtfiles/
-:Source: https://github.com/feed619/crtfiles
-:Keywords: crt, create, files
-
----
-
-FileGen — это мощный инструмент командной строки, предназначенный для быстрого и удобного создания файлов на основе заранее определенных шаблонов. Этот инструмент поможет вам сэкономить время и повысить производительность, устраняя необходимость ручного создания файлов и структурирования содержимого.
+<h3>crt</h3> - a powerful command line tool designed to create files quickly and easily, and also allows you to create projects based on predefined templates. This tool will help you save time and increase productivity by eliminating the need to manually create files and organize content.
 
 ---
 
