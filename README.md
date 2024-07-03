@@ -1,8 +1,6 @@
-"# crtfiles"
-
 <p align="center">
 <div>
-<img src="media/logo/crt_logo_black.png" width="50%"/>
+<img src="media/logo/crt_logo_black.png"/>
 </div>
 <div>
     <em><h1>crt</h1> <h3>Fast and convenient tool for creating files</h3></em>
