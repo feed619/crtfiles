@@ -1,6 +1,6 @@
 "# crtfiles"
 
-<img src="media/logo/crt_logo_black.svg" width="50%"/>
+<img src="media/logo/crt_logo_black.png" width="50%"/>
 
 :Version: 1.0
 :Download: https://pypi.org/project/crtfiles/
