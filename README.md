@@ -3,7 +3,10 @@
 </p>
 
 <p align="center">
-    <h1>crt</h1> <h3>Fast and convenient tool for creating files</h3>
+    <div>
+        <h1>crt</h1> 
+        <h3>Fast and convenient tool for creating files</h3>
+    </div>
 </p>
 
 ##
