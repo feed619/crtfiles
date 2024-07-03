@@ -2,8 +2,11 @@
 <img src="docs/crt_logo_dark_blue.png" />
 </p>
 
-<p align="center" style="font-size:200px;"><h2>crt is Fast and convenient tool for creating files</h2>
-</p>
+<h2>
+    <p align="center">
+    crt is Fast and convenient tool for creating files
+    </p>
+</h2>
 
 :Version: 1.0
 :Download: https://pypi.org/project/crtfiles/
