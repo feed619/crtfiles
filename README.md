@@ -57,14 +57,14 @@ pip install crtfiles
 ### 1) Creating a file:
 
 ```console
-crt file -n "main.py:test.py:..env"
+crt file -n "main.py:test.py:requirements.txt"
 
 --->
 your_folder/
 │
 ├── main.py
 ├── test.py
-└── ..env
+└── requirements.txt
 ```
 
 ### 2) Сreating a file with the extension option:
@@ -112,25 +112,58 @@ your_folder/
 ### 5) Creating attachments:
 
 ```console
-$ pip install fastapi
+crt file -n "app<base.py:control.py>:backends<database<models.py>:base.py>"
 
----> 100%
+--->
+your_folder/
+│
+├── app/
+│   ├── base.py
+│   └── control.py
+│
+└──  backends/
+    ├── database/
+    │   └── models.py
+    └── base.py
+
 ```
 
-Этот пример сначала добавляет новый HTML-шаблон, а затем создает файл index.html с динамическим содержимым.
+### 6) Сreating a project using a template:
 
-## Примечание
+```console
+crt temp -n app
+
+--->
+your_folder/
+│
+├── lib/
+│   ├── screens/
+│   ├── widgets/
+│   ├── models/
+│   ├── services/
+│   ├── utils/
+│   ├── assets/
+│   └── main.py
+│
+├──  test/
+├──  build/
+├──  README.md
+└──  .gitignore
+
+```
 
 ...
 
-## Настройка шаблонов
+## Примечание
+
+if you are working in the cmd console, then the request must be wrapped in quotes to avoid conflicts with the folder creation characters '<>'
+...
+
+## Setting up templates
 
 Вы можете легко добавлять и редактировать шаблоны для создания файлов. Например, чтобы добавить новый шаблон:
+...
 
-## Обратная связь:
+## Feedback:
 
-Я всегда рады услышать ваши отзывы и предложения по улучшению crt . Пожалуйста, отправляйте свои отзывы на наш GitHub репозиторий здесь.
-
-```
-
-```
+Я всегда рад услышать ваши отзывы и предложения по улучшению crt. Пожалуйста, оставляйте свои отзывы.
