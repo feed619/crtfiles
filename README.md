@@ -43,7 +43,7 @@ crt - a powerful command line tool designed to create files quickly and easily, 
 <div class="termy">
 
 ```console
-$ pip install crtfiles
+pip install crtfiles
 
 ---> 100%
 ```
@@ -57,9 +57,14 @@ $ pip install crtfiles
 ### 1) Creating a file:
 
 ```console
-$ pip install fastapi
+crt file -n "main.py:test.py:.gitignore"
 
----> 100%
+--->
+your_folder/
+│
+├── main.py
+├── test.p
+└── .gitignore
 ```
 
 ### 2) Creating a file:
