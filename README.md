@@ -30,12 +30,15 @@ crt - a powerful command line tool designed to create files quickly and easily, 
 
 ## Command Options:
 
+::
+
 - **file**:
   -n,--name (required option) - accepts a string of folder and file names(wrap the string with names in quotes '"'), for enumeration use the sign ':', to create folders use '<>' signs.
   ext (optional option) - after specifying the line with files, indicate the extension of all these files separated by a space
 
 - **temp**: -n,--name (required option) - specify the name of the template, by default there are the following templates: "web-front", "web-back", "app", "project", "config" .
 
+````
 <div class="termy">
 
 ```
@@ -119,3 +122,4 @@ $ pip install fastapi
 ## Обратная связь:
 
 Я всегда рады услышать ваши отзывы и предложения по улучшению crt . Пожалуйста, отправляйте свои отзывы на наш GitHub репозиторий здесь.
+````
