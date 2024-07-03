@@ -1,4 +1,4 @@
-<h1><p align="center">crt</p></h1>
+<!-- <h1><p align="center">crt</p></h1> -->
 <p align="center"><img src="docs/crt_logo_black.png" /></p>
 <h2><p align="center">Fast and convenient tool for creating files</p></h2>
 
