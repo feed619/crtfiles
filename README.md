@@ -26,7 +26,7 @@ crt - a powerful command line tool designed to create files quickly and easily, 
 ## Commands:
 
 - **file**: use to create files, folders and attachments.
-- **temp**: use to create a project using a template (templates are stored in the templates.json file).
+- **temp**: use to create a project using a template (templates are stored in the "templates.json" file).
 
 ## Command Options:
 
