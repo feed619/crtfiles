@@ -162,4 +162,6 @@ if you are working in the cmd console, then the request must be wrapped in quote
 
 ## Feedback:
 
-Я всегда рад услышать ваши отзывы и предложения по улучшению crt. Пожалуйста, оставляйте свои отзывы.
+Я всегда рад услышать ваши отзывы и предложения по улучшению crt \* [Email](crtpproject@gmail.com). Пожалуйста, оставляйте свои отзывы.
+
+- [Email](crtpproject@gmail.com)
