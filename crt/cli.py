@@ -32,7 +32,7 @@ def c_temp(name):
               required=True,
               multiple=False,
               type=str,
-              help='file -n "f_name1:f_name2:dir_name1<>:dir_name2<f_name>" py',)
+              help='file -n "f_name1:f_name2:dir_name1<>:dir_name2<f_name>" py a',)
 def c_files(ext, name):
     print(ext, name)
     crt_files(ext, name)

@@ -1,10 +1,8 @@
 "# crtfiles"
 
-|pyversion|
+<img src="media/logo/crt_logo_dark.png" width="50%"/>
 
 :Version: 1.0
-:Web: https://docs.celeryq.dev/en/stable/index.html
-:Download: https://pypi.org/project/celery/
-:Source: https://github.com/celery/celery/
-:Keywords: task, queue, job, async, rabbitmq, amqp, redis,
-python, distributed, actors
+:Download: https://pypi.org/project/crtfiles/
+:Source: https://github.com/feed619/crtfiles
+:Keywords: crt, create, files
