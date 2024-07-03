@@ -10,7 +10,7 @@
 
 ---
 
-<h3>crt</h3> - a powerful command line tool designed to create files quickly and easily, and also allows you to create projects based on predefined templates. This tool will help you save time and increase productivity by eliminating the need to manually create files and organize content.
+crt - a powerful command line tool designed to create files quickly and easily, and also allows you to create projects based on predefined templates. This tool will help you save time and increase productivity by eliminating the need to manually create files and organize content.
 
 ---
 
