@@ -1,6 +1,6 @@
 <p align="center">
 <div>
-<img src="media/logo/crt_logo_black2.png" width="80%"/>
+<img src="media/logo/crt_logo_black2.png" />
 </div>
 </p>
 
