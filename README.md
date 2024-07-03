@@ -40,17 +40,11 @@ crt - a powerful command line tool designed to create files quickly and easily, 
 
 ## Installation
 
-<div class="termy">
-
 ```console
 pip install crtfiles
 
 ---> 100%
 ```
-
-</div>
-
----
 
 ## Example
 
@@ -152,16 +146,25 @@ your_folder/
 
 ```
 
-## Примечание
+## Attention
 
 if you are working in the cmd console, then the request must be wrapped in quotes to avoid conflicts with the folder creation characters '<>'
 
 ## Setting up templates
 
-Вы можете легко добавлять и редактировать шаблоны для создания файлов. Например, чтобы добавить новый шаблон:
+You can easily add and edit templates. To do this, write on the command line:
+
+```console
+pip show crtfiles
+
+--->
+Location: ...\Lib\site-packages\
+```
+
+open the "crt" folder, then open the "data" folder and add or edit templates in the "templates.json" file to suit your needs (add templates strictly according to the examples from the file, if you make a mistake the result can be disastrous)
 
 ## Feedback:
 
-Я всегда рад услышать ваши отзывы и предложения по улучшению crt \* [Email](crtpproject@gmail.com). Пожалуйста, оставляйте свои отзывы.
+I'm always glad to hear your feedback and suggestions for improving crt. Please leave your feedback.
 
 - [Email](crtpproject@gmail.com)
