@@ -57,38 +57,56 @@ pip install crtfiles
 ### 1) Creating a file:
 
 ```console
-crt file -n "main.py:test.py:.gitignore"
+crt file -n "main.py:test.py:..env"
 
 --->
 your_folder/
 │
 ├── main.py
-├── test.p
-└── .gitignore
+├── test.py
+└── ..env
 ```
 
-### 2) Creating a file:
+### 2) Сreating a file with the extension option:
 
 ```console
-$ pip install fastapi
+crt file -n "main:test" py
 
----> 100%
+--->
+your_folder/
+│
+├── main.py
+└── test.py
 ```
 
 ### 3) Creating a folder:
 
 ```console
-$ pip install fastapi
+crt file -n "src<>:image<>:models<>"
 
----> 100%
+--->
+your_folder/
+│
+├── src/
+├── image/
+└── models/
 ```
 
 ### 4) Creating subfolders:
 
 ```console
-$ pip install fastapi
+crt file -n "src<models<>:assets<>>:lib<models<>>"
 
----> 100%
+--->
+your_folder/
+│
+├── src/
+│   ├── models/
+│   └── assets/
+│
+└──  lib/
+    └── models/
+
 ```
 
 ### 5) Creating attachments:
