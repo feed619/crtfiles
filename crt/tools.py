@@ -10,6 +10,7 @@ def get_file_nesting(nest, size_n) -> list:
     s_name = 0
     index = 0
     l_dir = []
+
     while index < len(nest):
         if nest[index] == '<':
             if nest[index+1] == '>':
@@ -24,8 +25,16 @@ def get_file_nesting(nest, size_n) -> list:
             l_dir.append({f"{nest[s_name:index].replace(':', '')}": list_dir})
             index = index+ind + 1
             s_name = index+ind + 1
-        if index+1 >= len(nest):
-            if (nest[s_name:index+1]):
+        if index+1 == len(nest):
+            if (nest[s_name:index]):
+
+                l_dir.append(nest[s_name:index+1].replace(':', ''))
+                if index + 1 >= size_n:
+                    return l_dir
+                return (l_dir, index)
+            return (l_dir)
+        if index+1 > len(nest):
+            if (nest[s_name:index]):
                 l_dir.append(nest[s_name:index].replace(':', ''))
                 if index + 1 >= size_n:
                     return l_dir
