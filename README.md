@@ -152,17 +152,13 @@ your_folder/
 
 ```
 
-...
-
 ## Примечание
 
 if you are working in the cmd console, then the request must be wrapped in quotes to avoid conflicts with the folder creation characters '<>'
-...
 
 ## Setting up templates
 
 Вы можете легко добавлять и редактировать шаблоны для создания файлов. Например, чтобы добавить новый шаблон:
-...
 
 ## Feedback:
 
