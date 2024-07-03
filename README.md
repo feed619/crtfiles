@@ -1,12 +1,13 @@
 <p align="center">
 <div>
-<img src="media/logo/crt_logo_black.png" width="70%"/>
+<img src="media/logo/crt_logo_black.png" width="80%"/>
 </div>
+</p>
+
 <p align="center">
 <div>
     <em><h1>crt</h1> <h3>Fast and convenient tool for creating files</h3></em>
 </div>
-<p align="center">
 </p>
 :Version: 1.0
 :Download: https://pypi.org/project/crtfiles/
