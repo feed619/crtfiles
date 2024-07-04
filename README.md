@@ -34,6 +34,7 @@ crt - a powerful command line tool designed to create files quickly and easily, 
 
 - **temps**:
   -t,--temp - specify the name of the template, by default there are the following templates: "web-front", "web-back", "app", "project", "config" .
+
   [crt {temp_name}]
 
 ---
