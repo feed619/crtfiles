@@ -54,7 +54,7 @@ pip install crtfiles
 ### 1) Creating a file:
 
 ```console
-crt file -n main.py:test.py:requirements.txt
+crt main.py:test.py:requirements.txt
 
 --->
 your_folder/
@@ -67,7 +67,7 @@ your_folder/
 ### 2) Сreating a file with the extension option:
 
 ```console
-crt file -n main:test py
+crt main:test py
 
 --->
 your_folder/
@@ -79,7 +79,7 @@ your_folder/
 ### 3) Creating a folder:
 
 ```console
-crt file -n "src<>:image<>:models<>"
+crt "src<>:image<>:models<>"
 
 --->
 your_folder/
@@ -92,7 +92,7 @@ your_folder/
 ### 4) Creating subfolders:
 
 ```console
-crt file -n "src<models<>:assets<>>:lib<models<>>"
+crt "src<models<>:assets<>>:lib<models<>>"
 
 --->
 your_folder/
@@ -109,7 +109,7 @@ your_folder/
 ### 5) Creating attachments:
 
 ```console
-crt file -n "app<base.py:control.py>:backends<database<models.py>:base.py>"
+crt "app<base.py:control.py>:backends<database<models.py>:base.py>"
 
 --->
 your_folder/
@@ -128,7 +128,7 @@ your_folder/
 ### 6) Сreating a project using a template:
 
 ```console
-crt temp -n app
+crt -t app
 
 --->
 your_folder/
