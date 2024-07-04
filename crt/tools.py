@@ -27,8 +27,10 @@ def get_file_nesting(nest, size_n) -> list:
             s_name = index+ind + 1
         if index+1 == len(nest):
             if (nest[s_name:index]):
-
-                l_dir.append(nest[s_name:index+1].replace(':', ''))
+                if (nest[index] == '>'):
+                    l_dir.append(nest[s_name:index].replace(':', ''))
+                else:
+                    l_dir.append(nest[s_name:index+1].replace(':', ''))
                 if index + 1 >= size_n:
                     return l_dir
                 return (l_dir, index)
