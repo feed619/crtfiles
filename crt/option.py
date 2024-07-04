@@ -79,5 +79,9 @@ def crt_dirs(t_str_names):
 
 def crt_temp(temp_name):
     l_temp = get_templates(temp_name)
-    l_dir = c_d(l_temp)
-    c_f(l_dir)
+    if l_temp:
+        l_dir = c_d(l_temp)
+        c_f(l_dir)
+    else:
+        print(
+            f"no such template name '{temp_name}'\nby default there are the following templates: 'web-front', 'web-back', 'app', 'project', 'config'")

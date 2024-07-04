@@ -4,12 +4,11 @@ import pkg_resources
 
 def get_templates(name: str):
     try:
-        print(name)
         template_path = pkg_resources.resource_filename(
             __name__, 'data/templates.json')
         with open(template_path, 'r', encoding='utf-8') as json_file:
             temp_file: dict = json.load(json_file)
-        if (name in temp_file.keys()):
+        if (name in temp_file):
             return temp_file.get(name)
         return None
     except FileNotFoundError:

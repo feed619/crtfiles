@@ -6,7 +6,7 @@ from crt.cli import main
 class TestMain(unittest.TestCase):
     def test_main(self):
         runner = CliRunner()
-        result = runner.invoke(main, ["file", "-n", "asd.py"])
+        result = runner.invoke(main, ["-n", "sd", "asd.py"])
 
         self.assertEqual(result.exit_code, 0)
 
