@@ -53,6 +53,13 @@ def get_file_nesting(nest, size_n) -> list:
 
 
 def is_correct_request(s_name: str):
+
+    incor_symbols = ['"', '/', '\\', '|', '?', '*', ' ']
+
+    for sym in s_name:
+        if sym in incor_symbols:
+            return f"don't use signs {sym} in names"
+
     cont_l_b = s_name.count('<')
     cont_r_b = s_name.count('>')
     if cont_l_b == cont_r_b:
