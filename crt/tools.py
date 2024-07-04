@@ -54,7 +54,7 @@ def get_file_nesting(nest, size_n) -> list:
 
 def is_correct_request(s_name: str):
 
-    incor_symbols = ['"', '/', '\\', '|', '?', '*', ' ']
+    incor_symbols = ['"', '/', '\\', '|', '?', '*', ';', "'", ' ',]
 
     for sym in s_name:
         if sym in incor_symbols:
