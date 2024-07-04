@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 NAME = "crtfiles"
 setup(
     name=NAME,
-    version='1.1',
+    version='1.1.1',
     author="feed619",
     author_email="azimovpro@gmail.com",
     description="create files quickly and conveniently with the 'crt' utility",
