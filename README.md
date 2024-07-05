@@ -1,6 +1,6 @@
 <!-- <h1><p align="center">crt</p></h1> -->
 <p align="center"><img src="https://i.postimg.cc/4yGPyFjn/crt-logo-dark-blue.png" /></p>
-<h2><p align="center">Fast and convenient tool for creating files</p></h2>
+<h2><p align="center">fast and convenient tool for creating files</p></h2>
 
 ---
 
@@ -35,7 +35,7 @@ crt - a powerful command line tool designed to create files quickly and easily, 
 - **temps**:
   -t,--temp - specify the name of the template, by default there are the following templates: "web-front", "web-back", "app", "project", "config" .
 
-  [crt {temp_name}]
+  [crt -t {temp_name}]
 
 ---
 
