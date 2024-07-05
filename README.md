@@ -176,4 +176,4 @@ open the "crt" folder, then open the "data" folder and add or edit templates in 
 
 I'm always glad to hear your feedback and suggestions for improving crt. Please leave your feedback.
 
-- [Email](crtpproject@gmail.com)
+- [Email](mailto:feed619pro@gmail.com)
