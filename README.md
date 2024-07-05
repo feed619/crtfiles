@@ -10,7 +10,7 @@ crt - a powerful command line tool designed to create files quickly and easily, 
 
 ## Possibilities
 
-- **Fast File Creation**: Create files instantly with simple commands.
+- **File Creation**: Create files instantly with simple commands.
 - **Folder Creation**: Easily create nested folder structures.
 - **Template support**: Use and create templates for frequently used projects and file types.
 - **Flexibility**: Easily customize templates to suit your needs.
