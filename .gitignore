@@ -1,6 +1,8 @@
 .venv
 venv/
 
+requirements.txt
+
 build/
 dist/
 crtfiles.egg-info/
