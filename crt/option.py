@@ -55,7 +55,7 @@ def c_d(l_str_names):
             if type(l_str_names[index]) is dict:
                 l_str_names[index] = c_d(l_str_names[index])
             else:
-                if not '.' in l_str_names[index]:
+                if not '.' in l_str_names[index] and l_str_names[index] != "LICENSE":
                     l_str_names[index] = {l_str_names[index]: []}
     return l_str_names
 

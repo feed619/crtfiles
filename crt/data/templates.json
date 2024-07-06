@@ -71,23 +71,12 @@
     ".gitignore"
   ],
   "project": [
-    {
-      "src": [
-        "models",
-        "routes",
-        "services",
-        "middlewares",
-        "utils",
-        "index.js"
-      ]
-    },
-    "config",
-    "public",
-    "tests",
-    "node_modules",
-    "package.json",
-    "README.md",
-    ".gitignore"
+    { "dics": ["image"] },
+    "bin",
+    "examples",
+    "scripts",
+    "src",
+    "tests"
   ],
   "config": [
     "README.md",
