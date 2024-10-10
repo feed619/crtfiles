@@ -2,6 +2,7 @@
 venv/
 
 requirements.txt
+commands.txt
 
 build/
 dist/

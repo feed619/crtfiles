@@ -78,6 +78,16 @@
     "src",
     "tests"
   ],
+  "aiogram-bot": [
+    {
+      "bot": [
+        { "handlers": "user_handlers.py" },
+        { "keyboards": "user_keyboards" }
+      ]
+    },
+    ".env",
+    "main.py"
+  ],
   "config": [
     "README.md",
     ".gitignore",
