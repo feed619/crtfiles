@@ -5,6 +5,7 @@ requirements.txt
 commands.txt
 
 build/
+old_dist/
 dist/
 crtfiles.egg-info/
 docs/
