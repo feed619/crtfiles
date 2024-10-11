@@ -81,8 +81,8 @@
   "aiogram-bot": [
     {
       "bot": [
-        { "handlers": "user_handlers.py" },
-        { "keyboards": "user_keyboards" }
+        { "handlers": ["user_handlers.py"] },
+        { "keyboards": ["user_keyboards"] }
       ]
     },
     ".env",

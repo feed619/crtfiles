@@ -1,7 +1,0 @@
-echo > {file_name.ex}
-type NUL >  {file_name.ex}
-mkdir {dir_name}
-
-
-pip install .
-pip uninstall 
