@@ -85,8 +85,7 @@ def crt_temp(json_temp: dict):
 
 
 def fill_temp(d_temp):
-    for file_path in d_temp.keys():
-        print(file_path)
+    for file_path in d_temp:
         code = d_temp[file_path].replace('/$$/', '\n')
         save_file(path=file_path, data=code)
 
@@ -102,4 +101,4 @@ def fill_code_is_exist(temp_name: str):
     d_temp = get_fiil_templates(temp_name)
     if not d_temp:
         return False
-    return True
+    return d_temp

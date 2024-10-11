@@ -22,12 +22,12 @@ def get_templates(name: str):
 def get_fiil_templates(name: str):
     try:
         template_path = pkg_resources.resource_filename(
-            __name__, 'data/fiil_code.json')
+            __name__, 'data/file_code.json')
         with open(template_path, 'r', encoding='utf-8') as json_file:
             temp_file: dict = json.load(json_file)
-        if (name in temp_file):
-            return temp_file.get(name)
-        return None
+            if (name in temp_file):
+                return temp_file.get(name)
+            return None
     except FileNotFoundError:
         print("JSON file not found.")
         return None

@@ -9,10 +9,13 @@ from crt.option import crt_files, crt_temp, fill_code_is_exist, fill_temp, temp_
               required=False,
               type=str,
               help='main:config:setup',)
+# @click.option('-f',
+#               '--fill',
+#               required=False,
+#               help='main:config:setup',)
 @click.argument('oth', required=False,)
 @click.argument('ext', required=False,)
-@click.argument('f', required=False,)
-def main(temp, oth, ext, f):
+def main(temp, oth, ext):
     """
 files: \tTo create files use 'crt' and list the names in quotes to list use the ':' sign to create folders use brackets after the name '<','>' in brackets you can specify files, after all names indicate file extensions if not specified in the names.
 Example: crt "file_name1:file_name2:dir_name1<>:dir_name2<file_name>" py\n
@@ -23,7 +26,6 @@ Example: crt -t app"""
         if json_temp:
             crt_temp(json_temp)
             if oth:
-                print(123123)
                 d_fill = fill_code_is_exist(temp)
                 if d_fill:
                     fill_temp(d_fill)
