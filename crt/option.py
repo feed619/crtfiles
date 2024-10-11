@@ -1,6 +1,6 @@
 import os
-from crt.templates import get_templates
-from crt.tools import get_all_directories, get_file_nesting, is_correct_request
+from crt.templates import get_fiil_templates, get_templates
+from crt.tools import get_all_directories, get_file_nesting, is_correct_request, save_file
 
 
 def c_f(t_str_names,  ext=None, name=None):
@@ -79,11 +79,27 @@ def crt_dirs(t_str_names):
                 os.system(f"mkdir {dir_name}")
 
 
-def crt_temp(temp_name):
+def crt_temp(json_temp: dict):
+    l_dir = c_d(json_temp)
+    c_f(l_dir)
+
+
+def fill_temp(d_temp):
+    for file_path in d_temp.keys():
+        print(file_path)
+        code = d_temp[file_path].replace('/$$/', '\n')
+        save_file(path=file_path, data=code)
+
+
+def temp_is_exist(temp_name: str) -> bool:
     l_temp = get_templates(temp_name)
-    if l_temp:
-        l_dir = c_d(l_temp)
-        c_f(l_dir)
-    else:
-        print(
-            f"no such template name '{temp_name}'\nby default there are the following templates: 'web-front', 'web-back', 'app', 'project', 'config'")
+    if not l_temp:
+        return False
+    return l_temp
+
+
+def fill_code_is_exist(temp_name: str):
+    d_temp = get_fiil_templates(temp_name)
+    if not d_temp:
+        return False
+    return True

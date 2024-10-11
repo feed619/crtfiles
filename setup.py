@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 NAME = "crtfiles"
 setup(
     name=NAME,
-    version='1.1.6',
+    version='1.1.7',
     author="feed619",
     author_email="azimovpro@gmail.com",
     description="create files quickly and conveniently with the 'crt' utility",
@@ -25,7 +25,7 @@ setup(
     license='MIT',
     include_package_data=True,
     package_data={
-        'crt': ['data/templates.json'],
+        'crt': ['data/templates.json', 'data/file_code.json'],
     },
     classifiers=[
         "Programming Language :: Python :: 3.7",

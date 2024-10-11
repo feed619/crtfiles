@@ -3,6 +3,7 @@ venv/
 
 requirements.txt
 commands.txt
+asdm.py
 
 build/
 old_dist/

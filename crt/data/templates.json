@@ -81,12 +81,27 @@
   "aiogram-bot": [
     {
       "bot": [
-        { "handlers": ["user_handlers.py"] },
-        { "keyboards": ["user_keyboards"] }
+        { "filters": ["__init__.py", "admin.py"] },
+        {
+          "handlers": [
+            "__init__.py",
+            "admin.py",
+            "echo.py",
+            "menu.py",
+            "user.py"
+          ]
+        },
+        { "keyboards": ["__init__.py", "inline.py", "reply.py"] },
+        { "middlewares": ["__init__.py", "config.py", "database.py"] },
+        { "misc": ["__init__.py", "states.py"] },
+        { "services": ["__init__.py", "broadcaster.py"] },
+        { "handlers": ["__init__.py", "user_handlers.py"] },
+        "__init__.py",
+        "config.py"
       ]
     },
     ".env",
-    "main.py"
+    "bot.py"
   ],
   "config": [
     "README.md",

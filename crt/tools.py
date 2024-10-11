@@ -1,3 +1,4 @@
+import json
 import os
 
 
@@ -70,3 +71,13 @@ def is_correct_request(s_name: str):
         return '<'
     if cont_l_b > cont_r_b:
         return '>'
+
+
+def load_json_file(path: str) -> dict:
+    with open(path, 'r', encoding='utf-8') as json_file:
+        temp_file: dict = json.load(json_file)
+
+
+def save_file(path: str, data: str) -> None:
+    with open(path, 'w', encoding='utf-8') as file:
+        file.write(data)
