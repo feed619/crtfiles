@@ -1,6 +1,5 @@
 <!-- <h1><p align="center">crt</p></h1> -->
-<p align="center"><img src="https://i.postimg.cc/4yGPyFjn/crt-logo-dark-blue.png" /></p>
-[![logo-blue.png](https://i.postimg.cc/90jpDsgK/logo-blue.png)](https://postimg.cc/VrDMTZ8W)
+<p align="center"><img src="https://i.postimg.cc/90jpDsgK/logo-blue.png" /></p>
 <h2><p align="center">fast and convenient tool for creating files</p></h2>
 
 ---
