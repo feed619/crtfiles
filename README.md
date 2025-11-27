@@ -1,5 +1,6 @@
 <!-- <h1><p align="center">crt</p></h1> -->
 <p align="center"><img src="https://i.postimg.cc/4yGPyFjn/crt-logo-dark-blue.png" /></p>
+[![logo-blue.png](https://i.postimg.cc/90jpDsgK/logo-blue.png)](https://postimg.cc/VrDMTZ8W)
 <h2><p align="center">fast and convenient tool for creating files</p></h2>
 
 ---
@@ -172,8 +173,9 @@ open the "crt" folder, then open the "data" folder and add or edit templates in 
 
 ---
 
-## Feedback:
+## Обратная связь:
 
-I'm always glad to hear your feedback and suggestions for improving crt. Please leave your feedback.
+Буду рад услышать ваши предложения и отзывы по улучшению проекта.
+Связаться можно по email:
 
 - [Email](mailto:feed619pro@gmail.com)
