@@ -1,45 +1,45 @@
 <!-- <h1><p align="center">crt</p></h1> -->
 <p align="center"><img src="https://i.postimg.cc/90jpDsgK/logo-blue.png" /></p>
-<h2><p align="center">fast and convenient tool for creating files</p></h2>
+<h2><p align="center">быстрый и удобный инструмент для создания файлов</p></h2>
 
 ---
 
-crt - a powerful command line tool designed to create files quickly and easily, and also allows you to create projects based on predefined templates. This tool will help you save time and increase productivity by eliminating the need to manually create files and organize content.
+crt - мощный инструмент командной строки, предназначенный для быстрого и легкого создания файлов, а также позволяющий создавать проекты на основе предопределенных шаблонов. Этот инструмент поможет вам сэкономить время и повысить производительность, избавляя от необходимости ручного создания файлов и организации содержимого.
 
 ---
 
-## Possibilities
+## Возможности
 
-- **File Creation**: Create files instantly with simple commands.
-- **Folder Creation**: Easily create nested folder structures.
-- **Template support**: Use and create templates for frequently used projects and file types.
-- **Flexibility**: Easily customize templates to suit your needs.
-
----
-
-## Сapabilities :
-
-- **files**: can create files, folders and attachments.
-- **temps**: can create a project using a template (templates are stored in the "templates.json" file).
+- **Создание файлов**: Мгновенно создавайте файлы с помощью простых команд.
+- **Создание папок**: Легко создавайте вложенные структуры папок.
+- **Поддержка шаблонов**: Используйте и создавайте шаблоны для часто используемых проектов и типов файлов.
+- **Гибкость**: Легко настраивайте шаблоны под свои нужды.
 
 ---
 
-## Description сapabilities:
+## Функционал:
+
+- **files**: может создавать файлы, папки и вложения.
+- **temps**: может создать проект с использованием шаблона (шаблоны хранятся в файле "templates.json").
+
+---
+
+## Описание функционала:
 
 - **files**:
-  accepts a string of folder and file names(wrap the string with names in quotes '"'), for enumeration use the sign ':', to create folders use '<>' signs.
-  ext (optional option) - after specifying the line with files, indicate the extension of all these files separated by a space
+  принимает строку с именами папок и файлов (заключите строку с именами в кавычки '"'), для перечисления используйте знак ':', для создания папок используйте знаки '<>'.
+  ext (опциональная опция) - после указания строки с файлами укажите расширение всех этих файлов через пробел.
 
-  [crt {file_name} {ext}]
+  [crt {имя_файла} {расширение}]
 
 - **temps**:
-  -t,--temp - specify the name of the template, by default there are the following templates: "web-front", "web-back", "app", "project", "config" .
+  -t,--temp - укажите имя шаблона, по умолчанию доступны следующие шаблоны: "web-front", "web-back", "app", "project", "config".
 
-  [crt -t {temp_name}]
+  [crt -t {имя_шаблона}]
 
 ---
 
-## Installation
+## Установка
 
 ```console
 pip install crtfiles
@@ -49,53 +49,53 @@ pip install crtfiles
 
 ---
 
-## Example
+## Примеры
 
-### 1) Creating a file:
+### 1) Создание файла::
 
 ```console
 crt main.py:test.py:requirements.txt
 
 --->
-your_folder/
+ваша_папка/
 │
 ├── main.py
 ├── test.py
 └── requirements.txt
 ```
 
-### 2) Сreating a file with the extension option:
+### 2) Создание файла с опцией расширения:
 
 ```console
 crt main:test py
 
 --->
-your_folder/
+ваша_папка/
 │
 ├── main.py
 └── test.py
 ```
 
-### 3) Creating a folder:
+### 3) Создание папки:
 
 ```console
 crt "src<>:image<>:models<>"
 
 --->
-your_folder/
+ваша_папка/
 │
 ├── src/
 ├── image/
 └── models/
 ```
 
-### 4) Creating subfolders:
+### 4) Создание вложенных папок:
 
 ```console
 crt "src<models<>:assets<>>:lib<models<>>"
 
 --->
-your_folder/
+ваша_папка/
 │
 ├── src/
 │   ├── models/
@@ -103,16 +103,15 @@ your_folder/
 │
 └──  lib/
     └── models/
-
 ```
 
-### 5) Creating attachments:
+### 5) Создание вложений:
 
 ```console
 crt "app<base.py:control.py>:backends<database<models.py>:base.py>"
 
 --->
-your_folder/
+ваша_папка/
 │
 ├── app/
 │   ├── base.py
@@ -122,16 +121,15 @@ your_folder/
     ├── database/
     │   └── models.py
     └── base.py
-
 ```
 
-### 6) Сreating a project using a template:
+### 6) Создание проекта с использованием шаблона:
 
 ```console
 crt -t app
 
 --->
-your_folder/
+ваша_папка/
 │
 ├── lib/
 │   ├── screens/
@@ -151,15 +149,15 @@ your_folder/
 
 ---
 
-## Attention
+## Внимание
 
-if you are working in the cmd console, then the request must be wrapped in quotes "" to avoid conflicts with the folder creation characters '<>'
+Если вы работаете в консоли cmd, то запрос необходимо заключать в кавычки "", чтобы избежать конфликтов с символами создания папок '<>'
 
 ---
 
-## Setting up templates
+## Настройка шаблонов
 
-You can easily add and edit templates. To do this, write on the command line:
+Вы можете легко добавлять и редактировать шаблоны. Для этого введите в командной строке:
 
 ```console
 pip show crtfiles
@@ -168,7 +166,7 @@ pip show crtfiles
 Location: ...\Lib\site-packages\
 ```
 
-open the "crt" folder, then open the "data" folder and add or edit templates in the "templates.json" file to suit your needs (add templates strictly according to the examples from the file, if you make a mistake the result can be disastrous)
+откройте папку "crt", затем откройте папку "data" и добавьте или отредактируйте шаблоны в файле "templates.json" под свои нужды (добавляйте шаблоны строго по примерам из файла, если допустите ошибку, результат может быть плачевным)
 
 ---
 
