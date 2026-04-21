@@ -38,6 +38,8 @@ commands.txt
 pip-log.txt
 pip-delete-this-directory.txt
 
+setup.py
+setup1.py
 # Unit test / coverage reports
 htmlcov/
 .tox/
