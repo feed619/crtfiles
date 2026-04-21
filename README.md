@@ -1,5 +1,5 @@
 <!-- <h1><p align="center">crt</p></h1> -->
-<p align="center"><img src="https://i.postimg.cc/4yGPyFjn/crt-logo-dark-blue.png" /></p>
+<p align="center"><img src="https://i.postimg.cc/qR92HXsv/crt-logo-blue.png" /></p>
 <h2><p align="center">быстрый и удобный инструмент для создания файлов</p></h2>
 
 ---
@@ -69,7 +69,7 @@ pip install crtfiles
 
 ### Шаблоны:
 
-#### 1)Просмотр Доступных шаблонов
+#### 1) Просмотр Доступных шаблонов
 
 ```console
 crt -v
@@ -88,8 +88,6 @@ Available templates:
 ```
 
 #### 2) Создание пользовательского шаблона:
-
-# Перейдите в директорию проекта и выполните
 
 ```console
 crt -t my_template -a -p my_project

@@ -1,4 +1,4 @@
-<p align="center"><img src="https://i.postimg.cc/4yGPyFjn/crt-logo-dark-blue.png" /></p>
+<p align="center"><img src="https://i.postimg.cc/qR92HXsv/crt-logo-blue.png" /></p>
 <h2><p align="center">A fast and convenient tool for creating files</p></h2>
 
 ---
@@ -38,15 +38,15 @@ crt {file_name} {extension}
 
 ### Template Management
 
-| Command                             | Description                                                                 |
-| ----------------------------------- | --------------------------------------------------------------------------- |
-| `crt -v`                            | View all available templates                                                |
-| `crt -t {name}`                     | Apply an existing template                                                  |
-| `crt -t {name} -f`                  | Apply a template with content filling                                       |
-| `crt -t {name} -p {path}`           | Specify target directory for template creation                              |
-| `crt -t {name} --append`            | Create a new template from the current directory                            |
-| `crt -t {name} --remove`            | Delete an existing template                                                 |
-| `crt -t {name} --rename {new_name}` | Rename a template                                                           |
+| Command                             | Description                                      |
+| ----------------------------------- | ------------------------------------------------ |
+| `crt -v`                            | View all available templates                     |
+| `crt -t {name}`                     | Apply an existing template                       |
+| `crt -t {name} -f`                  | Apply a template with content filling            |
+| `crt -t {name} -p {path}`           | Specify target directory for template creation   |
+| `crt -t {name} --append`            | Create a new template from the current directory |
+| `crt -t {name} --remove`            | Delete an existing template                      |
+| `crt -t {name} --rename {new_name}` | Rename a template                                |
 
 ---
 
@@ -293,4 +293,3 @@ If you are using Windows CMD, wrap the input string in quotes `""` to avoid conf
 I’m always happy to hear your feedback and suggestions for improving **crt**.
 
 - Email: feed619pro@gmail.com
-
