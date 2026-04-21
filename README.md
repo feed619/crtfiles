@@ -1,45 +1,63 @@
 <!-- <h1><p align="center">crt</p></h1> -->
 <p align="center"><img src="https://i.postimg.cc/4yGPyFjn/crt-logo-dark-blue.png" /></p>
-<h2><p align="center">fast and convenient tool for creating files</p></h2>
+<h2><p align="center">быстрый и удобный инструмент для создания файлов</p></h2>
 
 ---
 
-crt - a powerful command line tool designed to create files quickly and easily, and also allows you to create projects based on predefined templates. This tool will help you save time and increase productivity by eliminating the need to manually create files and organize content.
+crt — мощный инструмент командной строки, предназначенный для быстрого и лёгкого создания файлов, а также позволяющий создавать проекты на основе предопределённых шаблонов. Этот инструмент поможет вам сэкономить время и повысить продуктивность, избавив от необходимости вручную создавать файлы и организовывать содержимое.
 
 ---
 
-## Possibilities
+## Возможности
 
-- **File Creation**: Create files instantly with simple commands.
-- **Folder Creation**: Easily create nested folder structures.
-- **Template support**: Use and create templates for frequently used projects and file types.
-- **Flexibility**: Easily customize templates to suit your needs.
-
----
-
-## Сapabilities :
-
-- **files**: can create files, folders and attachments.
-- **temps**: can create a project using a template (templates are stored in the "templates.json" file).
+- **Создание файлов**: мгновенное создание файлов с помощью простых команд.
+- **Создание папок**: лёгкое создание вложенных структур папок.
+- **Поддержка шаблонов**: использование и создание шаблонов для часто используемых проектов и типов файлов.
+- **Управление шаблонами**: создание, просмотр, удаление и переименование пользовательских шаблонов.
+- **Гибкость**: простая настройка шаблонов под ваши нужды.
 
 ---
 
-## Description сapabilities:
+## Функции:
 
-- **files**:
-  accepts a string of folder and file names(wrap the string with names in quotes '"'), for enumeration use the sign ':', to create folders use '<>' signs.
-  ext (optional option) - after specifying the line with files, indicate the extension of all these files separated by a space
-
-  [crt {file_name} {ext}]
-
-- **temps**:
-  -t,--temp - specify the name of the template, by default there are the following templates: "web-front", "web-back", "app", "project", "config" .
-
-  [crt -t {temp_name}]
+- **files**: создание файлов, папок и вложений.
+- **temps**: создание проекта с использованием шаблона.
 
 ---
 
-## Installation
+## Описание команд:
+
+### Создание файлов и папок:
+
+Принимает строку с именами файлов и папок (оберните строку в кавычки '"'), для перечисления используйте знак ':', для создания папок используйте знаки '<>'.
+
+`crt {имя_файла} {расширение}`
+
+### Управление шаблонами:
+
+| Команда                             | Описание                                                                              |
+| ----------------------------------- | ------------------------------------------------------------------------------------- |
+| `crt -v`                            | Просмотр всех доступных шаблонов                                                      |
+| `crt -t {имя}`                      | Применить существующий шаблон                                                         |
+| `crt -t {имя} -f`                   | Применить шаблон с заполнением содержимого                                            |
+| `crt -t {имя} -p {путь}`            | Указать целевую директорию где будет создан шаблон                                    |
+| `crt -t {имя} --append`             | Создать новый шаблон из текущей директории (путь шаблона можно указать параметром -p) |
+| `crt -t {имя} --remove`             | Удалить существующий шаблон                                                           |
+| `crt -t {имя} --rename {новое_имя}` | Переименовать шаблон                                                                  |
+
+### Генерация .gitignore:
+
+| Команда                 | Описание                                    |
+| ----------------------- | ------------------------------------------- |
+| `crt -t gitignore py`   | Создать `.gitignore` для Python             |
+| `crt -t gitignore js`   | Создать `.gitignore` для JavaScript/Node.js |
+| `crt -t gitignore java` | Создать `.gitignore` для Java               |
+| `crt -t gitignore c`    | Создать `.gitignore` для C                  |
+| `crt -t gitignore c++`  | Создать `.gitignore` для C++                |
+| `crt -t gitignore c#`   | Создать `.gitignore` для C#                 |
+| `crt -t gitignore go`   | Создать `.gitignore` для Go                 |
+
+## Установка
 
 ```console
 pip install crtfiles
@@ -47,90 +65,37 @@ pip install crtfiles
 ---> 100%
 ```
 
----
+## Примеры
 
-## Example
+### Шаблоны:
 
-### 1) Creating a file:
-
-```console
-crt main.py:test.py:requirements.txt
-
---->
-your_folder/
-│
-├── main.py
-├── test.py
-└── requirements.txt
-```
-
-### 2) Сreating a file with the extension option:
+#### 1)Просмотр Доступных шаблонов
 
 ```console
-crt main:test py
+crt -v
 
 --->
-your_folder/
-│
-├── main.py
-└── test.py
-```
 
-### 3) Creating a folder:
-
-```console
-crt "src<>:image<>:models<>"
-
---->
-your_folder/
-│
-├── src/
-├── image/
-└── models/
-```
-
-### 4) Creating subfolders:
-
-```console
-crt "src<models<>:assets<>>:lib<models<>>"
-
---->
-your_folder/
-│
-├── src/
-│   ├── models/
-│   └── assets/
-│
-└──  lib/
-    └── models/
+Available templates:
+ Default:
+  • postgres (12 files)
+  • fastapi (22 files)
+  • react (71 files)
+  • tg_bot (19 files)
+  • tg_bot_full (96 files)
+  • gitignore (py, js, java, c, c++, go, c#)
 
 ```
 
-### 5) Creating attachments:
+#### 2) Создание пользовательского шаблона:
+
+# Перейдите в директорию проекта и выполните
 
 ```console
-crt "app<base.py:control.py>:backends<database<models.py>:base.py>"
+crt -t my_template -a -p my_project
 
 --->
-your_folder/
-│
-├── app/
-│   ├── base.py
-│   └── control.py
-│
-└──  backends/
-    ├── database/
-    │   └── models.py
-    └── base.py
 
-```
-
-### 6) Сreating a project using a template:
-
-```console
-crt -t app
-
---->
 your_folder/
 │
 ├── lib/
@@ -146,34 +111,148 @@ your_folder/
 ├──  build/
 ├──  README.md
 └──  .gitignore
-
 ```
 
----
-
-## Attention
-
-if you are working in the cmd console, then the request must be wrapped in quotes "" to avoid conflicts with the folder creation characters '<>'
-
----
-
-## Setting up templates
-
-You can easily add and edit templates. To do this, write on the command line:
+#### 3) Применение шаблона с заполнением содержимого
 
 ```console
-pip show crtfiles
+crt -t fastapi -p my_app -f
 
 --->
-Location: ...\Lib\site-packages\
+
+Template 'fastapi' applied successfully to: .\my_app
+
 ```
 
-open the "crt" folder, then open the "data" folder and add or edit templates in the "templates.json" file to suit your needs (add templates strictly according to the examples from the file, if you make a mistake the result can be disastrous)
+#### 4) Применение шаблона без заполнения (только структура):
 
----
+```console
+crt -t fastapi -p my_app
 
-## Feedback:
+--->
 
-I'm always glad to hear your feedback and suggestions for improving crt. Please leave your feedback.
+Template 'fastapi' applied successfully to: .\my_app
+
+```
+
+#### 5) Изменение названия пользовательского шаблона
+
+```console
+crt -t my_template -rn my_temp
+
+--->
+
+Template renamed: 'my_template' → 'my_temp'
+```
+
+#### 6) Удаление Пользовательского шаблона
+
+```console
+crt -t my_template -rm
+
+--->
+
+Template 'my_template' removed successfully!
+```
+
+### Файлы:
+
+#### 1) Создание файла:
+
+```console
+crt main.py:test.py:requirements.txt
+--->
+your_folder/
+│
+├── main.py
+├── test.py
+└── requirements.txt
+```
+
+#### 2) Создание файла с указанием расширения:
+
+```console
+crt main:test py
+--->
+your_folder/
+│
+├── main.py
+└── test.py
+```
+
+#### 3) Создание папки:
+
+```console
+crt "src<>:image<>:models<>"
+
+--->
+your_folder/
+│
+├── src/
+├── image/
+└── models/
+```
+
+#### 4) Создание вложенных папок:
+
+```console
+crt "src<models<>:assets<>>:lib<models<>>"
+
+--->
+your_folder/
+│
+├── src/
+│   ├── models/
+│   └── assets/
+│
+└──  lib/
+    └── models/
+```
+
+#### 5) Создание вложений (файлов внутри папок):
+
+```console
+crt "app<base.py:control.py>:backends<database<models.py>:base.py>"
+
+--->
+your_folder/
+│
+├── app/
+│   ├── base.py
+│   └── control.py
+│
+└──  backends/
+    ├── database/
+    │   └── models.py
+    └── base.py
+```
+
+## Настройка .crtignore
+
+Для исключения файлов и папок из шаблонов создайте файл .crtignore в корне проекта:
+gitignore
+
+### Пример .crtignore
+
+```crtignore
+__pycache__
+.venv
+venv
+.git
+.env
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+```
+
+## Внимание
+
+Если вы работаете в консоли cmd, запрос необходимо заключать в кавычки "" во избежание конфликтов с символами создания папок '<>'.
+
+## Обратная связь:
+
+Я всегда рад вашим отзывам и предложениям по улучшению crt. Пожалуйста, оставляйте свои комментарии.
+Электронная почта
 
 - [Email](mailto:feed619pro@gmail.com)
