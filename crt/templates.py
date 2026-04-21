@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 from typing import Optional, Dict
 
-from crt.tools import decode_from_base64, encode_to_base64, get_all_files, get_crtignore, get_main_crtignore, is_binary, is_text_file, read_any_file
+from crt.tools import decode_from_base64, get_all_files, get_crtignore, get_main_crtignore, is_text_file
 
 
 def get_user_data_dir() -> Path:
@@ -164,7 +164,7 @@ def make_template(base_dir: Path, template: dict, fill: bool) -> bool:
     Apply template to the specified directory
     """
     try:
-        
+
         for dir_path in template["folders"]:
             full_path = base_dir / dir_path
             full_path.parent.mkdir(parents=True, exist_ok=True)
