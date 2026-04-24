@@ -1,5 +1,7 @@
 <!-- <h1><p align="center">crt</p></h1> -->
-<p align="center"><img src="logo/crt_logo_blue.png" /></p>
+p align="center">
+  <img src="logo/crt_logo_blue.png" width="50%" />
+</p>
 <h2><p align="center">быстрый и удобный инструмент для создания файлов</p></h2>
 
 ---
