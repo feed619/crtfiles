@@ -1,4 +1,4 @@
-<p align="center"><img src="logo/crt_logo_deep_blue.png" /></p>
+<p align="center"><img src="logo/crt_logo_blue.png" /></p>
 <h2><p align="center">A fast and convenient tool for creating files</p></h2>
 
 ---
