@@ -1,4 +1,6 @@
-<p align="center"><img src="logo/crt_logo_blue.png" /></p>
+<p align="center">
+  <img src="logo/crt_logo_blue.png" width="200" />
+</p>
 <h2><p align="center">быстрый и удобный инструмент для создания файлов</p></h2>
 
 ---
